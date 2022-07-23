@@ -39,7 +39,7 @@ def reversednslookup(ip):
             for sect in partsplit:
                 last = list(sect)
                 for l in last:
-                    test += struct.pack(">c", l)
+                    test += struct.pack("p", bytes(l, 'ascii'))
                     print("iter: " + str(counter) + " " + l)
                     counter += 1
             #test += struct.pack('>B', int(part))
